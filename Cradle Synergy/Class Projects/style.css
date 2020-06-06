@@ -1,0 +1,23 @@
+.card {
+    
+    box-shadow: 0 2rem 4rem 0 rgba(0,0,0,0.2);
+    width: 25%; 
+    margin-left: 35%; 
+  }
+
+  .register{
+    padding: .2rem 4rem;
+  }
+
+  .loginForm{
+    padding: .2rem 4rem;
+  }
+
+  .Submit{
+      padding: .5rem 4rem;
+      background-color: #073242;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+  }
