@@ -30,7 +30,8 @@ function showSuccess(input){
 function checkEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
    if( re.test(input.value.trim())){
-       showSuccess(input)
+       showSuccess(input);
+       sendToLocal(input);
    }else{
        showError(input, 'Email is not valid');
    }
@@ -40,7 +41,8 @@ function checkEmail(input) {
 function checkPassword(input) {
     const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
    if( re.test(input.value.trim())){
-       showSuccess(input)
+       showSuccess(input);
+       sendToLocal(input);
    }else{
        showError(input, 'Password must contain Alpha Numeric');
    }
@@ -69,7 +71,12 @@ const checkLength = (input, min, max) =>{
         showError(input, `${getFieldName(input)} must not be more than ${max} characters`)
     }else{
         showSuccess(input);
+        sendToLocal(input);
     }
+}
+
+const sendToLocal = (input) =>{
+    localStorage.setItem(input.id, input.value)
 }
 
 
@@ -86,4 +93,6 @@ form.addEventListener('submit', function(e){
             checkLength(username, 5, 9);
             checkPassword(password);
             checkPassword(password, password2);
-})
+});
+
+
