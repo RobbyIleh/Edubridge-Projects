@@ -1,0 +1,19 @@
+// if (username.value === ''){
+        //     showError(username, 'Username is invalid');
+        // }else{
+        //     showSuccess(username);
+        //     console.log(username.value);
+        // }
+        // validateEmail(email);
+        // if (password.value === ''){
+        //     showError(password, 'Password cannot be empty');
+        // }else{
+        //     showSuccess(password);
+           
+        // }
+        // if (password.value !== password2.value){
+        //     showError(password2, 'Password must be the same');
+        // }else{
+        //     showSuccess(password2);
+        // }
+
